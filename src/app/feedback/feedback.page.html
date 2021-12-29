@@ -1,0 +1,64 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      FEEDBACK
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item>
+    <ion-label>Enter your Name :</ion-label>
+    <ion-input placeholder="Name" type="text" [(ngModel)]="username"></ion-input>
+    
+  </ion-item>
+  <ion-item>
+    <ion-label> Visited On :</ion-label>
+    <ion-datetime displayFormat="DD MMM YY" placeholder="Select Date"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label for="email">Email:</ion-label>
+    <ion-input type="email" id="email" class="validate" ></ion-input>
+  </ion-item>
+  <ion-radio-group value="biff">
+    <ion-item>
+      <ion-label>Gender</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Female</ion-label>
+      <ion-radio slot="start" value="Female"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Male</ion-label>
+      <ion-radio slot="start" value="Male"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Others</ion-label>
+      <ion-radio slot="start" value="Robot"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+
+    <ion-item><fieldset class="rating">
+      <legend align="center">Rate Us </legend>
+      <input type="radio" id="star10" name="rating" value="10" /><label for="star10" title="Roicks!">5 stars</label>
+      <input type="radio" id="star9" name="rating" value="9" /><label for="star9" title="Rocihks!">5 stars</label>
+      <input type="radio" id="star8" name="rating" value="8" /><label for="star8" title="Roocks!">5 stars</label>
+      <input type="radio" id="star7" name="rating" value="7" /><label for="star7" title="Roocks!">7 stars</label>
+      <input type="radio" id="star6" name="rating" value="6" /><label for="star6" title="Rockks!">6 stars</label>
+      <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+      <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+      <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+      <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+      <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+  </fieldset>
+    </ion-item>
+
+
+  <section>
+    <ion-button expand="block" class="button" (click)="presentAlert()">Submit</ion-button>
+  </section>
+<!-- <ion-button (click)="presentAlertRadio()">Alert radio</ion-button>  -->
+</ion-content>
